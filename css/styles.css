@@ -1,0 +1,142 @@
+/* CSS PRINCIPAL Y MENU DE NAVEGACIÓN */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+:root{
+    --rojo : #db0808;
+    --fondo: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Barlow Condensed', sans-serif  */
+body{
+    background: var(--fondo);
+}
+
+.contenedor{
+    width: 90% ;
+    margin: auto;
+}
+
+header {
+    padding: 30px 0;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color : var(--rojo);
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    
+}
+
+header nav a{
+    font-family: 'Barlow Condensed', sans-serif;
+    color: lightgray;
+    text-decoration: none;
+    font-size: large;
+    margin-right: 25px ;
+}
+ header nav a:hover,
+ header nav a.activo {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 4px 17px rgba(255,255,255,0.72);
+    font-weight: bold;
+ }
+
+ /* McGREGOR VS KHABIB */
+ .documental-principal{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: floralwhite;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(2, 77, 15, 0.15) 100%), url(../assets/images/backdrop.jpg);
+    background-position: center center;
+    background-size:cover ;
+    margin-bottom: 3.12em;
+    align-items:end;
+    display: flex;
+ }
+
+ .documental-principal .contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+ }
+
+ .documental-principal .titulo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.12em;
+    margin-bottom: 0.2em;
+    text-shadow: 13px 7px 20px #000000;
+ }
+
+ .documental-principal .descripcion {
+    font-family: 'Abel', sans-serif;
+    font-size: medium;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+    max-width: 50%;
+}
+
+.documental-principal .boton {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius:0.4em ;
+    color: white;
+    padding: 1em;
+    transition: all ease 1s;
+    letter-spacing: 0.5px;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-right: 1.2em;
+    cursor: pointer;
+    font-size: 1.2em;
+
+}
+
+.documental-principal .boton:hover {
+    background: #ffffff;
+    color:#000000;
+}
+
+.documental-principal .boton i {
+    margin-right:0.75em ;
+}
+
+
+/* MEDIA QUERIES*/
+
+@media screen and (max-width: 800px){
+    header .logotipo{
+        margin-bottom : 10px;
+        font-size: 1.5em ;
+        
+    }
+    header .contenedor{
+        flex-direction: column;
+    }
+    .documental-principal .titulo{
+        transition: ease all 0.5s;
+        font-size: 2em;
+    }
+    .documental-principal .descripcion{
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 800px){
+    .documental-principal .titulo{
+        transition: ease all 0.5s;
+    }
+}

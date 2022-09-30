@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+:root{
+    --rojo : #db0808;
+    --fondo: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Barlow Condensed', sans-serif  */
+body{
+    background: var(--fondo);
+}
+
+.contenedor{
+    width: 90% ;
+    margin: auto;
+}
+
+header {
+    padding: 30px 0;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color : var(--rojo);
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    
+}
+
+header nav a{
+    font-family: 'Barlow Condensed', sans-serif;
+    color: lightgray;
+    text-decoration: none;
+    font-size: large;
+    margin-right: 25px ;
+}
+ header nav a:hover,
+ header nav a.activo {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 4px 17px rgba(255,255,255,0.72);
+    font-weight: bold;
+ }
+
+ .main{
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items:center ;
+}
+
+.fondo{
+    background-position: center ;
+    font-size: 16px;
+    min-height: 40.62em;
+    color: floralwhite;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(2, 77, 15, 0.2) 100%), url(/assets/images/cartelera-conor1.jpg);  
+}
+
+h1{
+    text-shadow: 0px 4px 17px rgba(255,255,255,0.72);
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 4em;
+}
+
+span{
+    text-shadow: 0px 4px 17px rgba(92, 84, 84, 0.72);
+    font-style: italic;
+    line-height: 20px;
+    font-size: x-large;
+    font-weight: 800;
+    color:#db0808;
+}
+
+p{
+    color: white;
+    font-family: 'Abel', sans-serif;
+    font-size: medium;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+    max-width: 50%;
+}
+
+/* MEDIA QUERIES*/
+
+@media screen and (max-width: 800px){
+    header .logotipo{
+        margin-bottom : 10px;
+        font-size: 1.5em ;
+        
+    }
+    header .contenedor{
+        flex-direction: column;
+    }
+    .documental-principal .titulo{
+        transition: ease all 0.5s;
+        font-size: 2em;
+    }
+    .documental-principal .descripcion{
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 800px){
+    .documental-principal .titulo{
+        transition: ease all 0.5s;
+
+    }
+}
